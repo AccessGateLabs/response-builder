@@ -126,7 +126,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
      * Handle Standard Servlet Multipart. Triggered when a multipart exception is generated.
      *
      * @param ex	Multipart exception		@see MultipartException
-     * @param redirectAttributes 			@see RedirectAttributes
+     * @param redirectAttributes	RedirectAttributes 			@see RedirectAttributes
      * @return StateServiceResponse			@see StateServiceResponse object
      */
     @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -143,7 +143,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
      * Handle Common Servlet Multipart. Triggered when a 'Maximum Upload size exceed' exception is generated.
      *
      * @param ex	MaxUploadExceededException	@see MaxUploadExceededException
-     * @param redirect-attributes 				@see RedirectAttributes
+     * @param redirectAttributes	RedirectAttributes 				@see RedirectAttributes
      * @return StateServiceResponse	Object		@see StateServiceResponse
      */
     @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -324,6 +324,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
      * Handle Exception, handle generic Exception.class
      *
      * @param ex Exception @see Exception
+     * @param request	WebRequest @see WebRequest
      * @return StateServiceResponse Object @see StateServiceResponse
      */
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
@@ -339,7 +340,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     /**
      * Returns the path of the request @see URI 
      *
-     * @param request	WebRequest @see WebRequest
+     * @param webRequest	WebRequest @see WebRequest
      * @return path URI path @see String
      */
     public static String uriPath(WebRequest webRequest) {

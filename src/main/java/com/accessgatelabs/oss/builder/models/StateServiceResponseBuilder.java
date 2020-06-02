@@ -52,9 +52,9 @@ public class StateServiceResponseBuilder {
 	 * with
 	 * @see HttpStatus @see ServiceResponse and @see String message. 
 	 * 
-	 * @param httpStatus @see HttpStatus
-	 * @param serviceResponse @see ServiceResponse
-	 * @param message @see String
+	 * @param httpStatus HttpStatus @see HttpStatus
+	 * @param serviceResponse ServiceResponse @see ServiceResponse
+	 * @param message the response message @see String
 	 * 
 	 * @return an object of @see StateServiceResponse containing
 	 * @see HttpResponse @see ApiServiceResponse and @see String message. 
@@ -70,8 +70,8 @@ public class StateServiceResponseBuilder {
 	 * with
 	 * @see HttpStatus and @see ServiceResponse. 
 	 * 
-	 * @param httpStatus @see HttpStatus
-	 * @param serviceResponse @see ServiceResponse
+	 * @param httpStatus HttpStatus @see HttpStatus
+	 * @param serviceResponse ServiceResponse @see ServiceResponse
 	 * 
 	 *  @return an object of @see StateServiceResponse containing
 	 *  @see HttpResponse and @see ApiServiceResponse. 
@@ -88,10 +88,10 @@ public class StateServiceResponseBuilder {
 	 * @see HttpStatus and @see ServiceResponse @see FileUploadResponse and 
 	 * @see String message. 
 	 * 
-	 * @param httpStatus @see HttpStatus
-	 * @param serviceResponse @see ServiceResponse
-	 * @param fileUploadResponse List<FileUploadResponse> @see FileUploadResponse
-	 * @param message @see String
+	 * @param httpStatus HttpStatus @see HttpStatus
+	 * @param serviceResponse ServiceResponse @see ServiceResponse
+	 * @param fileUploadResponse List of FileUploadResponse @see FileUploadResponse
+	 * @param message the response message @see String
 	 * 
 	 *  @return an object of @see StateServiceResponse containing
 	 *  @see HttpResponse @see ApiServiceResponse @see FileUploadResponse and 
@@ -126,11 +126,11 @@ public class StateServiceResponseBuilder {
 	 * wrapped in a @see ResponseEntity body
 	 * along with standard @see HttpStatus status. 
 	 * 
-	 * @param httpStatus @see HttpStatus
-	 * @param serviceResponse @see ServiceResponse
+	 * @param httpStatus HttpStatus @see HttpStatus
+	 * @param serviceResponse ServiceResponse @see ServiceResponse
 	 * 
-	 *  @return an object of @see ResponseEntity containing
-	 *  an object of @see HttpStatus and @see ServiceResponse.
+	 * @return an object of @see ResponseEntity containing
+	 * an object of @see HttpStatus and @see ServiceResponse.
 	 *   
 	 */
     public ResponseEntity<?> buildResponse(HttpStatus httpStatus, ServiceResponse serviceResponse) {
@@ -144,12 +144,12 @@ public class StateServiceResponseBuilder {
 	 * wrapped in a @see ResponseEntity body
 	 * along with standard @see HttpStatus status. 
 	 * 
-	 * @param httpStatus @see HttpStatus
-	 * @param serviceResponse @see ServiceResponse
-	 * @param message @see String
+	 * @param httpStatus HttpStatus @see HttpStatus
+	 * @param serviceResponse ServiceResponse @see ServiceResponse
+	 * @param message the response message @see String
 	 * 
-	 *  @return an object of @see ResponseEntity containing
-	 *  an object of @see HttpStatus and @see ServiceResponse and String message.
+	 * @return an object of @see ResponseEntity containing
+	 * an object of @see HttpStatus and @see ServiceResponse and String message.
 	 *   
 	 */
     public ResponseEntity<?> buildResponse(HttpStatus httpStatus, ServiceResponse serviceResponse, String message) {
@@ -163,12 +163,13 @@ public class StateServiceResponseBuilder {
 	 * wrapped in a @see ResponseEntity body
 	 * along with standard @see HttpStatus status. 
 	 * 
-	 * @param httpStatus @see HttpStatus
-	 * @param serviceResponse @see ServiceResponse
-	 * @param message @see String
+	 * @param httpStatus 			HttpStatus @see HttpStatus
+	 * @param serviceResponse 		ServiceResponse @see ServiceResponse
+	 * @param objectAsResponse		Object for response
+	 * @param message the response 	message @see String
 	 * 
-	 *  @return an object of @see ResponseEntity containing
-	 *  an object of @see HttpStatus, @see ServiceResponse, @see Object as response and @see String message.
+	 * @return an object of @see ResponseEntity containing
+	 * an object of @see HttpStatus, @see ServiceResponse, @see Object as response and @see String message.
 	 *   
 	 */
     public ResponseEntity<?> buildResponse(HttpStatus httpStatus, ServiceResponse serviceResponse, Object objectAsResponse, String message) {
@@ -182,9 +183,9 @@ public class StateServiceResponseBuilder {
 	 * wrapped in a @see ResponseEntity body
 	 * along with standard @see HttpStatus status. 
 	 * 
-	 * @param httpStatus @see HttpStatus
-	 * @param serviceResponse @see ServiceResponse
-	 * @param objectAsResponse @see Object
+	 * @param httpStatus 		HttpStatus @see HttpStatus
+	 * @param serviceResponse 	ServiceResponse @see ServiceResponse
+	 * @param objectAsResponse 	Object for response @see Object
 	 * 
 	 *  @return an object of @see ResponseEntity containing
 	 *  an object of @see HttpStatus, @see ServiceResponse and @see Object as response.
@@ -201,10 +202,10 @@ public class StateServiceResponseBuilder {
 	 * wrapped in a @see ResponseEntity body
 	 * along with standard @see HttpStatus status. 
 	 * 
-	 * @param httpStatus @see HttpStatus
-	 * @param serviceResponse @see ServiceResponse
-	 * @param fileUploadResponse List<FileUploadResponse> @see FileUploadResponse
-	 * @param objectAsResponse @see Object
+	 * @param httpStatus 			HttpStatus @see HttpStatus
+	 * @param serviceResponse 		ServiceResponse @see ServiceResponse
+	 * @param fileUploadResponse 	List of FileUploadResponse @see FileUploadResponse
+	 * @param objectAsResponse 		Object for response @see Object
 	 * 
 	 *  @return an object of @see ResponseEntity containing
 	 *  an object of @see HttpStatus @see ServiceResponse @see FileUploadResponse and @see Object as response.
@@ -222,10 +223,11 @@ public class StateServiceResponseBuilder {
 	 * wrapped in a @see ResponseEntity body
 	 * along with standard @see HttpStatus status. 
 	 * 
-	 * @param httpStatus @see HttpStatus
-	 * @param serviceResponse @see ServiceResponse
-	 * @param fileUploadResponse List<FileUploadResponse> @see FileUploadResponse
-	 * @param objectAsResponse @see Object
+	 * @param httpStatus 			HttpStatus @see HttpStatus
+	 * @param serviceResponse 		ServiceResponse @see ServiceResponse
+	 * @param fileUploadResponse 	List of FileUploadResponse @see FileUploadResponse
+	 * @param objectAsResponse 		Object for response @see Object
+	 * @param message				the response message
 	 * 
 	 *  @return an object of @see ResponseEntity containing
 	 *  an object of @see HttpStatus @see ServiceResponse @see FileUploadResponse @see Object 
@@ -244,10 +246,10 @@ public class StateServiceResponseBuilder {
 	 * wrapped in a @see ResponseEntity body
 	 * along with standard @see HttpStatus status. 
 	 * 
-	 * @param httpStatus @see HttpStatus
-	 * @param serviceResponse @see ServiceResponse
-	 * @param fileUploadResponse List<FileUploadResponse> @see FileUploadResponse
-	 * @param message @see String
+	 * @param httpStatus 			HttpStatus @see HttpStatus
+	 * @param serviceResponse 		ServiceResponse @see ServiceResponse
+	 * @param fileUploadResponse 	List of FileUploadResponse @see FileUploadResponse
+	 * @param message 				the response message @see String
 	 * 
 	 *  @return an object of @see ResponseEntity containing
 	 *  an object of @see HttpStatus @see ServiceResponse @see FileUploadResponse and @see String message.
@@ -266,10 +268,10 @@ public class StateServiceResponseBuilder {
 	 * wrapped in a @see ResponseEntity body
 	 * along with standard @see HttpStatus status. 
 	 * 
-	 * @param httpStatus @see HttpStatus
-	 * @param serviceResponse @see ServiceResponse
-	 * @param fileUploadResponse List<FileUploadResponse> @see FileUploadResponse
-	 * @param ex @see Throwable
+	 * @param httpStatus 			HttpStatus @see HttpStatus
+	 * @param serviceResponse 		ServiceResponse @see ServiceResponse
+	 * @param fileUploadResponse 	List of FileUploadResponse @see FileUploadResponse
+	 * @param ex 					Exception @see Throwable
 	 * 
 	 *  @return an object of @see ResponseEntity containing
 	 *  an object of @see HttpStatus, @see ServiceResponse and @exception Exception localized message.
@@ -288,10 +290,10 @@ public class StateServiceResponseBuilder {
 	 * wrapped in a @see ResponseEntity body
 	 * along with standard @see HttpStatus status. 
 	 * 
-	 * @param httpStatus @see HttpStatus
-	 * @param serviceResponse @see ServiceResponse
-	 * @param messageStatusResponse @see MessageStatusResponse
-	 * @param objectAsResponse @see Object
+	 * @param httpStatus 				HttpStatus @see HttpStatus
+	 * @param serviceResponse 			ServcieResponse @see ServiceResponse
+	 * @param messageStatusResponse 	MessageStatusResponse @see MessageStatusResponse
+	 * @param objectAsResponse 			Object for response @see Object
 	 * 
 	 *  @return an object of @see ResponseEntity containing
 	 *  an object of @see HttpStatus, @see ServiceResponse, @see MessageStatusResponse and @see Object as response.
@@ -309,11 +311,11 @@ public class StateServiceResponseBuilder {
 	 * wrapped in a @see ResponseEntity body
 	 * along with standard @see HttpStatus status. 
 	 * 
-	 * @param httpStatus @see HttpStatus
-	 * @param messageStatusResponse @see MessageStatusResponse
-	 * @param serviceResponse @see ServiceResponse
-	 * @param objectAsResponse @see Object
-	 * @param message @see String
+	 * @param httpStatus 				HttpStatus @see HttpStatus
+	 * @param messageStatusResponse 	MessageStatusResponse @see MessageStatusResponse
+	 * @param serviceResponse 			ServiceResponse @see ServiceResponse
+	 * @param objectAsResponse 			Object for response @see Object
+	 * @param message 					the response message @see String
 	 * 
 	 *  @return an object of @see ResponseEntity containing
 	 *  an object of @see HttpStatus, @see ServiceResponse, @see MessageStatusResponse, @see Object 
@@ -332,10 +334,10 @@ public class StateServiceResponseBuilder {
 	 * wrapped in a @see ResponseEntity body
 	 * along with standard @see HttpStatus status. 
 	 * 
-	 * @param httpStatus @see HttpStatus
-	 * @param serviceResponse @see ServiceResponse
-	 * @param messageStatusResponse @see MessageStatusResponse
-	 * @param message @see String
+	 * @param httpStatus 				HttpStatus @see HttpStatus
+	 * @param serviceResponse 			ServiceResponse @see ServiceResponse
+	 * @param messageStatusResponse 	MessageStatusResponse @see MessageStatusResponse
+	 * @param message 					the response message @see String
 	 * 
 	 *  @return an object of @see ResponseEntity containing
 	 *  an object of @see HttpStatus, @see ServiceResponse, @see MessageStatusResponse and @see String message.
@@ -354,10 +356,10 @@ public class StateServiceResponseBuilder {
 	 * wrapped in a @see ResponseEntity body
 	 * along with standard @see HttpStatus status. 
 	 * 
-	 * @param httpStatus @see HttpStatus
-	 * @param serviceResponse @see ServiceResponse
-	 * @param messageStatusResponse @see MessageStatusResponse
-	 * @param ex @see Throwable
+	 * @param httpStatus 				HttpStatus @see HttpStatus
+	 * @param serviceResponse 			ServiceResponse @see ServiceResponse
+	 * @param messageStatusResponse 	MessageStatusResponse @see MessageStatusResponse
+	 * @param ex 						Exception @see Throwable
 	 * 
 	 *  @return an object of @see ResponseEntity containing
 	 *  an object of @see HttpStatus, @see ServiceResponse and @exception Exception localized message.

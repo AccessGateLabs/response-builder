@@ -51,6 +51,7 @@ public enum ViolationType {
 
 	/**
 	 * Return the violation field code (actual code)
+	 * @return fieldErrorCode String
 	 */
 	public String fieldErrorCode() {
 		return this.fieldErrorCode;
