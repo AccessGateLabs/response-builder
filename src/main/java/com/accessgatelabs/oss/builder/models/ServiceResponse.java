@@ -403,6 +403,7 @@ public enum ServiceResponse {
 
 	/**
 	 * Return the integer value of this status code.
+	 * @return value of status code
 	 */
 	public int value() {
 		return this.value;
@@ -410,6 +411,7 @@ public enum ServiceResponse {
 
 	/**
 	 * Return the reason phrase of this status code.
+	 * @return reason phrase of status code
 	 */
 	public String getReasonPhrase() {
 		return this.reasonPhrase;
@@ -417,6 +419,7 @@ public enum ServiceResponse {
 	
 	/**
 	 * Return the HttpStatus of this status code.
+	 * @return Http status
 	 */
 	public HttpStatus getHttpStatus() {
 		return this.httpStatus;
@@ -424,6 +427,7 @@ public enum ServiceResponse {
 	
 	/**
 	 * Return a string representation of this status code.
+	 * @return String representation
 	 */
 	@Override
 	public String toString() {
@@ -439,7 +443,7 @@ public enum ServiceResponse {
 	 * 
 	 * @return status @see HttpStatus 
 	 * and 
-	 * @see ServiceResponse 
+	 * @see ServiceResponse
 	 * for 
 	 * @see StateServiceResponse
 	 */
@@ -472,7 +476,8 @@ public enum ServiceResponse {
 	 * @see ResponseEntity 
 	 * object.
 	 * 
-	 * @return status @see HttpStatus, 
+	 * @param message the response message
+	 * @return status @see HttpStatus 
 	 * @see ServiceResponse
 	 * and @see String message 
 	 * for @see StateServiceResponse
@@ -491,8 +496,11 @@ public enum ServiceResponse {
 	 * @see ResponseEntity 
 	 * object.
 	 * 
-	 * @return status @see HttpStatus, 
-	 * @see ServiceResponse,
+	 * @param objectAsResponse the object for response building
+	 * @param message the response message
+	 * 
+	 * @return status @see HttpStatus
+	 * @see ServiceResponse
 	 * @see Object objectAsResponse 
 	 * for 
 	 * @see ResponseEntity
@@ -511,8 +519,11 @@ public enum ServiceResponse {
 	 * and returns the @see ResponseEntity 
 	 * object.
 	 * 
-	 * @return status @see HttpStatus, 
-	 * @see ServiceResponse,
+	 * @param fileUploadResponse	FileUploadResponse
+	 * @param message				the response message
+	 * 
+	 * @return status @see HttpStatus
+	 * @see ServiceResponse
 	 * @see FileUploadResponse 
 	 * and @see String message 
 	 * for 
@@ -532,7 +543,9 @@ public enum ServiceResponse {
 	 * and returns @see ResponseEntity 
 	 * object.
 	 * 
-	 * @return status @see HttpStatus, 
+	 * @param fileUploadResponse	FileUploadResponse
+	 * 
+	 * @return status @see HttpStatus
 	 * @see ServiceResponse and
 	 * @see FileUploadResponse 
 	 * for 
@@ -551,10 +564,14 @@ public enum ServiceResponse {
 	 * and returns @see ResponseEntity 
 	 * object.
 	 * 
-	 * @return status @see HttpStatus, 
-	 * @see ServiceResponse, 
-	 * @see FileUploadResponse,
-	 * @see Object objectAsResponse and 
+	 * @param fileUploadResponse	FileUploadResponse
+	 * @param objectAsResponse		Object for response building
+	 * @param message				the response message
+	 * 
+	 * @return status @see HttpStatus
+	 * @see ServiceResponse
+	 * @see FileUploadResponse
+	 * @see Object objectAsResponse 
 	 * @see String message for 
 	 * @see ResponseEntity
 	 */
@@ -574,8 +591,11 @@ public enum ServiceResponse {
 	 * @see ResponseEntity 
 	 * object.
 	 * 
-	 * @return status @see HttpStatus, 
-	 * @see ServiceResponse, 
+	 * @param fileUploadResponse	FileUploadResponse
+	 * @param objectAsResponse		Object for response building
+	 * 
+	 * @return status @see HttpStatus
+	 * @see ServiceResponse
 	 * @see FileUploadResponse
 	 * and @see Object objectAsResponse 
 	 * for 
@@ -595,8 +615,11 @@ public enum ServiceResponse {
 	 * and returns @see ResponseEntity 
 	 * object.
 	 * 
-	 * @return status @see HttpStatus, 
-	 * @see ServiceResponse, 
+	 * @param messageStatusResponse	MessageStatusResponse
+	 * @param message				the response message
+	 * 
+	 * @return status @see HttpStatus
+	 * @see ServiceResponse
 	 * @see MessageStatusResponse and
 	 * @see String message 
 	 * for 
@@ -616,7 +639,9 @@ public enum ServiceResponse {
 	 * and returns the @see ResponseEntity 
 	 * object.
 	 * 
-	 * @return status @see HttpStatus, 
+	 * @param messageStatusResponse		MessageStatusResponse
+	 * 
+	 * @return status @see HttpStatus
 	 * @see ServiceResponse
 	 * and @see MessageStatusResponse 
 	 * for 
@@ -635,9 +660,13 @@ public enum ServiceResponse {
 	 * and returns the @see ResponseEntity 
 	 * object.
 	 * 
-	 * @return status @see HttpStatus, 
-	 * @see ServiceResponse, 
-	 * @see MessageStatusResponse,
+	 * @param messageStatusResponse		MessageStatusResponse
+	 * @param objectAsResponse			Object for response building
+	 * @param message					the response message
+	 * 
+	 * @return status @see HttpStatus
+	 * @see ServiceResponse
+	 * @see MessageStatusResponse
 	 * @see Object objectAsResponse and @see String message 
 	 * for 
 	 * @see ResponseEntity
@@ -657,8 +686,11 @@ public enum ServiceResponse {
 	 * and returns the @see ResponseEntity 
 	 * object.
 	 * 
-	 * @return status @see HttpStatus, 
-	 * @see ServiceResponse, 
+	 * @param messageStatusResponse		MessageStatusResponse
+	 * @param objectAsResponse			Object for response building
+	 * 
+	 * @return status @see HttpStatus
+	 * @see ServiceResponse
 	 * @see FileUploadResponse
 	 * and @see Object objectAsResponse 
 	 * for 
@@ -677,7 +709,7 @@ public enum ServiceResponse {
 	
 	/**
 	 * Return the enum constant of this type with the specified numeric value.
-	 * @param serviceResponseStatus the numeric value of the enum to be returned
+	 * @param serviceResponse the numeric value of the enum to be returned
 	 * @return ServiceResponse the enum constant with the specified numeric value
 	 * @throws IllegalArgumentException if this enum has no constant for the specified numeric value
 	 */
@@ -691,13 +723,13 @@ public enum ServiceResponse {
 
 	/**
 	 * Resolve the given Service Response code to an @see ServiceResponse, if possible.
-	 * @param statusCode @see ServiceResponse code (potentially non-standard)
-	 * @return the corresponding @see ServiceResponse, or null if not found
+	 * @param serviceResponseCode the service response code @see ServiceResponse code (potentially non-standard)
+	 * @return the corresponding @see ServiceResponse or null if not found
 	 */
 	@Nullable
-	public static ServiceResponse resolve(int ServiceResponseCode) {
+	public static ServiceResponse resolve(int serviceResponseCode) {
 		for (ServiceResponse serviceResponse : values()) {
-			if (serviceResponse.value == ServiceResponseCode) {
+			if (serviceResponse.value == serviceResponseCode) {
 				return serviceResponse;
 			}
 		}

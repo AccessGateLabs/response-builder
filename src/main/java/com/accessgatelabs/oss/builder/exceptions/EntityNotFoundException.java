@@ -23,10 +23,10 @@ import java.util.Map;
 import java.util.stream.IntStream;
 
 /**
- * Handles @exception EntityNotFoundException	When an entity is not found
+ * Handles @see EntityNotFoundException	When an entity is not found
  * 
  * Created to encapsulate errors with more detail than 
- * @see javax.persistence.EntityNotFoundException 
+ * @see EntityNotFoundException 
  * 
  * 
  * @author Ekansh Tiwari

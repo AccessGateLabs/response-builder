@@ -27,26 +27,24 @@ import lombok.Setter;
  * The class for generating responses whenever the response is
  * related to SMS or Email. 
  * 
- * <p>
- * 		This class generates information:
- * 		<ul>
- * 			<li>
- * 				Type (SMS/EMAIL)
- * 			</li>
- * 			<li>
- * 				isSent (true/false)
- * 			</li>
- * 			<li>
- * 				isDelivered (true/false)
- * 			</li>
- * 			<li>
- * 				recipients (array of String)
- * 			</li>
- * 			<li>
- * 				ttd (time to delivery) - in seconds
- * 			</li>
- * 		</ul>
- *</p>
+ * This class generates information:
+ * <ul>
+ * 		<li>
+ * 			Type (SMS/EMAIL)
+ * 		</li>
+ * 		<li>
+ * 			isSent (true/false)
+ * 		</li>
+ * 		<li>
+ * 			isDelivered (true/false)
+ * 		</li>
+ * 		<li>
+ * 			recipients (array of String)
+ * 		</li>
+ * 		<li>
+ * 			ttd (time to delivery) - in seconds
+ * 		</li>
+ * </ul>
  *
  * @author Ekansh Tiwari
  * @version 1.0.0

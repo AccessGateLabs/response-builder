@@ -60,10 +60,10 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * A base class for @see ControllerAdvice
  * that provides centralized exception handling across all
- * @see RequestMapping methods through @see ExceptionHandler methods.
+ * RequestMapping methods through ExceptionHandler methods.
  *
  * <p>
- * 		This class provides @see ExceptionHandler methods for handling
+ * 		This class provides ExceptionHandler methods for handling
  * 		multiple exceptions. This method returns a @see StateServiceResponse
  * 		for writing to the response with a @see HttpResponse.
  * </p>
@@ -126,7 +126,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
      * Handle Standard Servlet Multipart. Triggered when a multipart exception is generated.
      *
      * @param ex	Multipart exception		@see MultipartException
-     * @param redirect-attributes 			@see RedirectAttributes
+     * @param redirectAttributes 			@see RedirectAttributes
      * @return StateServiceResponse			@see StateServiceResponse object
      */
     @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -161,9 +161,11 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
      * Handle org.springframework.security.access.AccessDeniedException. Triggered when an 'unauthorized' call is performed.
      *
      * @param ex	AccessDeniedException	@see AccessDeniedException
-     * @param request 						@see HttpServletRequest
-     * @param response 						@see HttpServletResponse
+     * @param request	HttpServletRequest						@see HttpServletRequest
+     * @param response 	HttpServletResponse						@see HttpServletResponse
      * @return StateServiceResponse Object	@see StateServiceResponse
+     * @throws IOException	If an input or output exception occurred
+     * @throws ServletException	If servlet exception occurred
      */
     @ExceptionHandler(value = { AccessDeniedException.class })
     public ResponseEntity<?> handleAccessDeniedException(HttpServletRequest request, HttpServletResponse response,
@@ -182,9 +184,9 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
      * Handle @exception HttpMediaTypeNotSupportedException. This one triggers when JSON is invalid as well.
      *
      * @param ex	HttpMediaTypeNotSupportedException	@see HttpMediaTypeNotSupportedException
-     * @param headers 									@see HttpHeaders
-     * @param status  									@see HttpStatus
-     * @param request 									@see WebRequest
+     * @param headers	HttpHeaders 									@see HttpHeaders
+     * @param status  	HttpStatus								@see HttpStatus
+     * @param request 	WebRequest								@see WebRequest
      * @return StateServiceResponse object 				@see StateServiceResponse
      */
     @Override
@@ -208,9 +210,9 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
      * Handle @see MethodArgumentNotValidException. Triggered when an object fails validation.
      *
      * @param ex      the @see MethodArgumentNotValidException that is thrown when validation fails
-     * @param headers @see HttpHeaders
-     * @param status  @see HttpStatus
-     * @param request @see WebRequest
+     * @param headers	HttpHeaders @see HttpHeaders
+     * @param status	HttpStatus  @see HttpStatus
+     * @param request	WebRequest @see WebRequest
      * @return StateServiceResponse Object @see StateServiceResponse object
      */
     @Override
@@ -256,9 +258,9 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
      * Handle @see HttpMessageNotReadableException. Happens when request JSON is malformed.
      *
      * @param ex	HttpMessageNotReadableException	@see HttpMessageNotReadableException
-     * @param headers @see HttpHeaders
-     * @param status  @see HttpStatus
-     * @param request @see WebRequest
+     * @param headers	HttpHeaders @see HttpHeaders
+     * @param status	HttpStatus  @see HttpStatus
+     * @param request	WebRequest	@see WebRequest
      * @return StateServiceResponse Object @see StateServiceResponse
      */
     @Override
@@ -281,9 +283,9 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
      * Handle @see HttpMessageNotWritableException.
      *
      * @param ex	HttpMessageNotWritableException	@see HttpMessageNotWritableException
-     * @param headers @see HttpHeaders
-     * @param status  @see HttpStatus
-     * @param request @see WebRequest
+     * @param headers	HttpHeaders @see HttpHeaders
+     * @param status	HttpStatus  @see HttpStatus
+     * @param request	WebRequest @see WebRequest
      * @return StateServiceResponse Object @see StateServiceResponse
      */
     @Override
@@ -301,9 +303,9 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
      * Handle @see NoHandlerFoundException.
      *
      * @param ex	NoHandlerFoundException @see NoHandlerFoundException
-     * @param headers @see HttpHeaders
-     * @param status @see HttpStatus
-     * @param request @see HttpRequest
+     * @param headers	HttpHeaders @see HttpHeaders
+     * @param status	HttpStatus @see HttpStatus
+     * @param request	WebRequest @see WebRequest
      * @return StateServiceResponse Object @see StateServiceResponse
      */
     @Override
@@ -337,8 +339,8 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     /**
      * Returns the path of the request @see URI 
      *
-     * @param request @see WebRequest
-     * @return URI path @see String
+     * @param request	WebRequest @see WebRequest
+     * @return path URI path @see String
      */
     public static String uriPath(WebRequest webRequest) {
     	String path = webRequest.getContextPath() + (String) webRequest.getAttribute(
@@ -350,8 +352,8 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     /**
      * Build the Response Entity Object
      *
-     * @param StateServiceResponse @see StateServiceResponse
-     * @return Object @see ResponseEntity
+     * @param stateServiceResponse	StateServiceResponse @see StateServiceResponse
+     * @return 	an Object of @see ResponseEntity
      */
     public static ResponseEntity<Object> buildResponseEntity(StateServiceResponse stateServiceResponse) {
     	return new ResponseEntity<>(stateServiceResponse, stateServiceResponse.getHttpResponse().getStatus());

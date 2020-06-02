@@ -29,17 +29,16 @@ import lombok.Setter;
 /**
  * The class for generating HTTP responses 
  * 
- * <p>
- * 		This class generates:
- * 		<ul>
- * 			<li>
- * 				HTTP Status Code
- * 			</li>
- * 			<li>
- * 				HTTP Status
- * 			</li>
- * 		</ul>
- * </p>
+ * This class generates:
+ * <ul>
+ * 		<li>
+ * 			HTTP Status Code
+ * 		</li>
+ * 		<li>
+ * 			HTTP Status
+ * 		</li>
+ * </ul>
+ * 
  * 
  * @author Ekansh Tiwari
  * @version 1.0.0

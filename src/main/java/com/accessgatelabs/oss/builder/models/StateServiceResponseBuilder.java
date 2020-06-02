@@ -48,16 +48,16 @@ public class StateServiceResponseBuilder {
     
     
     /**
-	 * Methods to Build @see StateServiceResponse, 
+	 * Methods to Build @see StateServiceResponse 
 	 * with
-	 * @see HttpStatus, @see ServiceResponse and @see String message. 
+	 * @see HttpStatus @see ServiceResponse and @see String message. 
 	 * 
 	 * @param httpStatus @see HttpStatus
 	 * @param serviceResponse @see ServiceResponse
 	 * @param message @see String
 	 * 
-	 *  @return an object of @see StateServiceResponse containing
-	 *  @see HttpResponse, @see ApiServiceResponse and @see String message. 
+	 * @return an object of @see StateServiceResponse containing
+	 * @see HttpResponse @see ApiServiceResponse and @see String message. 
 	 */
     public StateServiceResponse build(HttpStatus httpStatus, ServiceResponse serviceResponse, String message) {
 		int serviceResponseValue = serviceResponse.value();
@@ -83,18 +83,18 @@ public class StateServiceResponseBuilder {
     }
     
     /**
-	 * Methods to Build @see StateServiceResponse, 
+	 * Methods to Build @see StateServiceResponse 
 	 * with
-	 * @see HttpStatus and @see ServiceResponse, @see FileUploadResponse and 
+	 * @see HttpStatus and @see ServiceResponse @see FileUploadResponse and 
 	 * @see String message. 
 	 * 
 	 * @param httpStatus @see HttpStatus
 	 * @param serviceResponse @see ServiceResponse
-	 * @param fileUploadResponse @see List<FileUploadResponse>
+	 * @param fileUploadResponse List<FileUploadResponse> @see FileUploadResponse
 	 * @param message @see String
 	 * 
 	 *  @return an object of @see StateServiceResponse containing
-	 *  @see HttpResponse, @see ApiServiceResponse, @see FileUploadResponse and 
+	 *  @see HttpResponse @see ApiServiceResponse @see FileUploadResponse and 
 	 *  @see String message. 
 	 */
     public StateServiceResponse build(HttpStatus httpStatus, ServiceResponse serviceResponse, 
@@ -203,11 +203,11 @@ public class StateServiceResponseBuilder {
 	 * 
 	 * @param httpStatus @see HttpStatus
 	 * @param serviceResponse @see ServiceResponse
-	 * @param fileUploadResponse @see List<FileUploadResponse>
+	 * @param fileUploadResponse List<FileUploadResponse> @see FileUploadResponse
 	 * @param objectAsResponse @see Object
 	 * 
 	 *  @return an object of @see ResponseEntity containing
-	 *  an object of @see HttpStatus, @see ServiceResponse, @see FileUploadResponse and @see Object as response.
+	 *  an object of @see HttpStatus @see ServiceResponse @see FileUploadResponse and @see Object as response.
 	 *   
 	 */
     public ResponseEntity<?> buildResponse(HttpStatus httpStatus, ServiceResponse serviceResponse,
@@ -224,11 +224,11 @@ public class StateServiceResponseBuilder {
 	 * 
 	 * @param httpStatus @see HttpStatus
 	 * @param serviceResponse @see ServiceResponse
-	 * @param fileUploadResponse @see List<FileUploadResponse>
+	 * @param fileUploadResponse List<FileUploadResponse> @see FileUploadResponse
 	 * @param objectAsResponse @see Object
 	 * 
 	 *  @return an object of @see ResponseEntity containing
-	 *  an object of @see HttpStatus, @see ServiceResponse, @see FileUploadResponse, @see Object 
+	 *  an object of @see HttpStatus @see ServiceResponse @see FileUploadResponse @see Object 
 	 *  and @see String message as response.
 	 *   
 	 */
@@ -246,11 +246,11 @@ public class StateServiceResponseBuilder {
 	 * 
 	 * @param httpStatus @see HttpStatus
 	 * @param serviceResponse @see ServiceResponse
-	 * @param fileUploadResponse @see List<FileUploadResponse>
+	 * @param fileUploadResponse List<FileUploadResponse> @see FileUploadResponse
 	 * @param message @see String
 	 * 
 	 *  @return an object of @see ResponseEntity containing
-	 *  an object of @see HttpStatus, @see ServiceResponse, @see FileUploadResponse and @see String message.
+	 *  an object of @see HttpStatus @see ServiceResponse @see FileUploadResponse and @see String message.
 	 *   
 	 */
     public ResponseEntity<?> buildResponse(HttpStatus httpStatus, ServiceResponse serviceResponse, 
@@ -268,7 +268,7 @@ public class StateServiceResponseBuilder {
 	 * 
 	 * @param httpStatus @see HttpStatus
 	 * @param serviceResponse @see ServiceResponse
-	 * @param fileUploadResponse @see List<FileUploadResponse>
+	 * @param fileUploadResponse List<FileUploadResponse> @see FileUploadResponse
 	 * @param ex @see Throwable
 	 * 
 	 *  @return an object of @see ResponseEntity containing

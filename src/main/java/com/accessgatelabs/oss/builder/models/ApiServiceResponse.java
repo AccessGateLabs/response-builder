@@ -27,17 +27,16 @@ import lombok.Setter;
 /**
  * The class for generating API responses. 
  * 
- * <p>
- * 		This class generates two information:
- * 		<ul>
- * 			<li>
- * 				Service Response Code
- * 			</li>
- * 			<li>
- * 				Service Response
- * 			</li>
- * 		</ul>
- * </p>
+ * <p>This class generates two information:</p>
+ * <ul>
+ * 		<li>
+ * 			Service Response Code
+ * 		</li>
+ * 		<li>
+ * 			Service Response
+ * 		</li>
+ * </ul>
+ * 
  * 
  * For details on Service Response Code and Service Response, refer @see ServiceResponse.
  *
