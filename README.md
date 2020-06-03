@@ -1,3 +1,5 @@
+<img src="https://ddq9rurjysv4s.cloudfront.net/logo/logo.svg" alt="AccessGate Labs Logo" width="70px">
+
 # response-builder
 AccessGate Labs Response Builder is a standard Java written wrapper to help your application REST APIs produce standard/exception responses. The manager follows certain nomenclatures and semantics to produce responses that are easy to consume and quick to interpret.
 
@@ -10,8 +12,6 @@ Licensed under the Apache License, Version 2.0 (the "License") you may not use t
 
 - Website: https://www.accessgatelabs.com
 - LinkedIn: https://www.linkedin.com/company/AccessGateLabs
-
-<img src="https://ddq9rurjysv4s.cloudfront.net/logo/logo.svg" alt="AccessGate Labs Logo" width="160px">
 
 Requirements
 ------------
