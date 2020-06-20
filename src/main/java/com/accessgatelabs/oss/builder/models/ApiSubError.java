@@ -16,15 +16,19 @@
 
 package com.accessgatelabs.oss.builder.models;
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+
 /**
  * An abstract class for Validation sub errors
  * 
  * @author Ekansh Tiwari
- * @version 1.0.0
+ * @version 1.0.5
  * @since   2020-06-02
  * @see <a href="https://github.com/AccessGateLabs/response-builder">AccessGate Labs Response Builder on GitHub</a>
  * @see <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>
  */
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public abstract class ApiSubError {
 
 }

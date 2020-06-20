@@ -18,6 +18,9 @@ package com.accessgatelabs.oss.builder.models;
 
 import org.springframework.stereotype.Service;
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -47,7 +50,7 @@ import lombok.Setter;
  * </ul>
  *
  * @author Ekansh Tiwari
- * @version 1.0.0
+ * @version 1.0.5
  * @since   2020-06-02
  * @see <a href="https://github.com/AccessGateLabs/response-builder">AccessGate Labs Response Builder on GitHub</a>
  * @see <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>
@@ -57,6 +60,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class MessageStatusResponse {
 	private String type;
 	private boolean isSent;

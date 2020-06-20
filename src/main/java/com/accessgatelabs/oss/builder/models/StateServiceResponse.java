@@ -11,6 +11,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import com.fasterxml.jackson.databind.annotation.JsonTypeIdResolver;
 
 import lombok.Getter;
@@ -28,7 +30,7 @@ import lombok.Setter;
  * </p>
  *
  * @author Ekansh Tiwari
- * @version 1.0.0
+ * @version 1.0.5
  * @since   2020-06-02
  * @see <a href="https://github.com/AccessGateLabs/response-builder">AccessGate Labs Response Builder on GitHub</a>
  * @see <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>
@@ -38,6 +40,7 @@ import lombok.Setter;
 @JsonTypeInfo(include = JsonTypeInfo.As.EXISTING_PROPERTY, use = JsonTypeInfo.Id.NAME, visible = true)
 @JsonTypeIdResolver(LowerCamelCaseClassNameResolver.class)
 @JsonPropertyOrder({ "timestamp", "message", "errorCount", "path", "apiServiceResponse" })
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class StateServiceResponse {
 	
 	@JsonProperty("http")

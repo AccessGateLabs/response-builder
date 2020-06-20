@@ -18,18 +18,22 @@ package com.accessgatelabs.oss.builder.exceptions;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+
 /**
  * The base class for Application Exception 
  * that extends @exception RuntimeException
  * 
  * 
  * @author Ekansh Tiwari
- * @version 1.0.0
+ * @version 1.0.5
  * @since   2020-06-02
  * @see <a href="https://github.com/AccessGateLabs/response-builder">AccessGate Labs Response Builder on GitHub</a>
  * @see <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>
  */
 @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class AppException extends RuntimeException {
     /**
 	 * 
