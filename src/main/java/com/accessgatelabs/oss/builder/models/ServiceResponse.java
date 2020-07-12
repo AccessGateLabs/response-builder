@@ -124,6 +124,22 @@ public enum ServiceResponse {
 	),
 	
 	
+	IN_PROCESS
+	(
+		3002,
+		"In Process",
+		HttpStatus.BAD_REQUEST
+	),
+	
+	
+	IN_PROGRESS
+	(
+		3003,
+		"In Progress",
+		HttpStatus.OK
+	),
+	
+	
 	INVALID_TOKEN
 	(
 			4000, 
