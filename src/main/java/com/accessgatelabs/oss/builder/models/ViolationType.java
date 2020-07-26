@@ -39,6 +39,16 @@ public enum ViolationType {
 	(
 			"NotNull"
 	),
+
+	Invalid_Pattern
+	(
+			"Pattern"
+	),
+
+	Invalid_Value_Length
+	(
+			"Size"
+	),
 	
 	Missing_Key
 	(
