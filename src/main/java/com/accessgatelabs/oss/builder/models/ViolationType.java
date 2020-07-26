@@ -53,6 +53,11 @@ public enum ViolationType {
 	Missing_Key
 	(
 			null
+	),
+
+	Invalid_URL
+	(
+			"URL"
 	)
 	
 	;
