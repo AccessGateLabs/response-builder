@@ -50,14 +50,14 @@ public enum ViolationType {
 			"Size"
 	),
 	
-	Missing_Key
-	(
-			null
-	),
-
 	Invalid_URL
 	(
 			"URL"
+	),
+
+	Missing_Key
+	(
+			null
 	)
 	
 	;
