@@ -332,6 +332,34 @@ public enum ServiceResponse {
 			HttpStatus.BAD_REQUEST
 	),
 	
+	ALREADY_APPROVED
+	(
+			4032, 
+			"Already Approved", 
+			HttpStatus.OK
+	),
+	
+	ALREADY_REJECTED
+	(
+			4033, 
+			"Already Rejected", 
+			HttpStatus.OK
+	),
+	
+	ALREADY_INVITED
+	(
+			4034, 
+			"Already Invited", 
+			HttpStatus.OK
+	),
+	
+	ALREADY_INITIATED
+	(
+			4035, 
+			"Already Initiated", 
+			HttpStatus.OK
+	),
+	
 	
 	INTERNAL_CONNECTION_DISPUTE
 	(
