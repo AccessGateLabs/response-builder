@@ -363,7 +363,8 @@ public enum ServiceResponse {
 	INSUFFICIENT_CREDIT
 	(
 			4036,
-			"Insufficient Credit"
+			"Insufficient Credit",
+			HttpStatus.OK
 	),
 
 	
