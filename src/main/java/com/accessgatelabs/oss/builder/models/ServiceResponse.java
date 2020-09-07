@@ -359,7 +359,13 @@ public enum ServiceResponse {
 			"Already Initiated", 
 			HttpStatus.OK
 	),
-	
+
+	INSUFFICIENT_CREDIT
+	(
+			4036,
+			"Insufficient Credit"
+	),
+
 	
 	INTERNAL_CONNECTION_DISPUTE
 	(
