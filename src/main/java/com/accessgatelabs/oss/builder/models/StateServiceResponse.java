@@ -63,7 +63,7 @@ public class StateServiceResponse {
 	@JsonProperty("exceptions")
 	private List<ApiSubError> subErrors;
     
-	@JsonProperty("object")
+	@JsonProperty("result")
 	private Object objectAsResponse;
 	
 	@JsonProperty("fileResponse")

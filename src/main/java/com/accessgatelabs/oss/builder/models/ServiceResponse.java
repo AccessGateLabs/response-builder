@@ -36,267 +36,543 @@ import org.springframework.lang.Nullable;
  */
 public enum ServiceResponse {
 	
+	/*
+	 * Information Responses
+	 */
+	
+	CREATION_IN_PROGRESS
+	(
+		1010,
+		"Creation In Progress",
+		HttpStatus.PROCESSING
+	),
+	
+	UPLOADING_IN_PROGRESS
+	(
+		1020,
+		"Uploading In Progress",
+		HttpStatus.PROCESSING
+	),
+	
+	DELETION_IN_PROGRESS
+	(
+		1030,
+		"Deletion In Progress",
+		HttpStatus.PROCESSING
+	),
+	
+	COPYING_IN_PROGRESS
+	(
+		1040,
+		"Copying In Progress",
+		HttpStatus.PROCESSING
+	),
+	
+	BATCH_PROCESSING_IN_PROGRESS
+	(
+		1050,
+		"Batch Processing In Progress",
+		HttpStatus.PROCESSING
+	),
+	
+	CLONING_IN_PROGRESS
+	(
+		1060,
+		"Cloning In Progress",
+		HttpStatus.PROCESSING
+	),
+	
+	SANITIZATION_IN_PROGRESS
+	(
+		1070,
+		"Sanitization In Progress",
+		HttpStatus.PROCESSING
+	),
+	
+	LAUNCH_IN_PROGRESS
+	(
+		1080,
+		"Launch In Progress",
+		HttpStatus.PROCESSING
+	),
+	
+	JOB_IN_PROGRESS
+	(
+		1090,
+		"Job In Progress",
+		HttpStatus.PROCESSING
+	),
+	
+	ALREADY_VERIFIED
+	(
+			1110, 
+			"Already Verified", 
+			HttpStatus.CONTINUE
+	),
+	
+	ALREADY_CREATED
+	(
+			1130, 
+			"Already Created", 
+			HttpStatus.CONTINUE
+	),
+	
+	ALREADY_DELETED
+	(
+			1150, 
+			"Already Deleted", 
+			HttpStatus.CONTINUE
+	),
+	
+	ALREADY_UPDATED
+	(
+			1170, 
+			"Already Updated", 
+			HttpStatus.CONTINUE
+	),
+	
+	ALREADY_COPIED
+	(
+			1190, 
+			"Already Copied", 
+			HttpStatus.CONTINUE
+	),
+	
+	ALREADY_CLONED
+	(
+			1210, 
+			"Already Cloned", 
+			HttpStatus.CONTINUE
+	),
+	
+	ALREADY_REMOVED
+	(
+			1230, 
+			"Already Removed", 
+			HttpStatus.CONTINUE
+	),
+	
+	ALREADY_MOVED
+	(
+			1250, 
+			"Already Moved", 
+			HttpStatus.CONTINUE
+	),
+	
+	/*
+	 * Successful Responses
+	 */
+	
 	CREATED
 	(
-			1000, 
+			2010, 
 			"Created", 
 			HttpStatus.CREATED
 	),
 	
+	
 	UPLOADED
 	(
-			1001, 
+			2020, 
 			"Uploaded", 
-			HttpStatus.ACCEPTED
+			HttpStatus.CREATED
 	),
 	
 	UPDATED
 	(
-			1003, 
+			2030, 
 			"Updated", 
-			HttpStatus.ACCEPTED
-	),
-	
-	JWT_TOKEN_INITIALIZED
-	(
-			1004, 
-			"Jwt Token Initialized", 
-			HttpStatus.ACCEPTED
-	),
-	
-	MAIL_SENT
-	(
-			1005, 
-			"Mail Sent", 
 			HttpStatus.OK
 	),
 	
 	FETCHED
 	(
-			1006, 
+			2040, 
 			"Fetched", 
+			HttpStatus.OK
+	),
+	
+	DELETED
+	(
+			2050, 
+			"Deleted", 
+			HttpStatus.OK
+	),
+	
+	RESOURCE_REMOVED
+	(
+			2060, 
+			"Resource Removed", 
+			HttpStatus.OK
+	),
+	
+	RESOURCE_MOVED
+	(
+			2070, 
+			"Resource Moved", 
+			HttpStatus.OK
+	),
+	
+	RESOURCE_COPIED
+	(
+			2080, 
+			"Resource Copied", 
+			HttpStatus.OK
+	),
+	
+	RESOURCE_CLONED
+	(
+			2090, 
+			"Resource Cloned", 
+			HttpStatus.OK
+	),
+	
+	JWT_TOKEN_INITIALIZED
+	(
+			2110, 
+			"Jwt Token Initialized", 
+			HttpStatus.OK
+	),
+	
+	TOKEN_INITIALIZED
+	(
+			2130, 
+			"Token Initialized", 
+			HttpStatus.OK
+	),
+	
+	TOKEN_DELETED
+	(
+			2150, 
+			"Token Deleted", 
+			HttpStatus.OK
+	),
+	
+	MAIL_SENT
+	(
+			2170, 
+			"Mail Sent", 
 			HttpStatus.OK
 	),
 	
 	OTP_SMS_SENT
 	(
-			1007, 
+			2190, 
 			"OTP SMS Sent", 
 			HttpStatus.OK
 	),
 	
-	
-	LOGGED_IN
+	OTP_EMAIL_SENT
 	(
-			1008,
-			"Logged In",
+			2210, 
+			"OTP Email Sent", 
+			HttpStatus.OK
+	),
+	
+	OTP_SENT
+	(
+			2230, 
+			"OTP Sent", 
+			HttpStatus.OK
+	),
+	
+	LOGGED_IN_SUCCESS
+	(
+			2250,
+			"Logged In Success",
 			HttpStatus.OK
 	),
 	
 	
 	VERIFIED
 	(
-			2000, 
+			2270, 
 			"Verified", 
 			HttpStatus.OK
 	),
 	
-	ALREADY_VERIFIED
-	(
-			2001, 
-			"Already Verified", 
-			HttpStatus.OK
-	),
 	
-	
-	REMOVED
-	(
-			3000, 
-			"Removed", 
-			HttpStatus.OK
-	),
-	
-	DELETED
-	(
-			3001, 
-			"Deleted", 
-			HttpStatus.OK
-	),
-	
-	
-	IN_PROCESS
-	(
-		3002,
-		"In Process",
-		HttpStatus.BAD_REQUEST
-	),
-	
-	
-	IN_PROGRESS
-	(
-		3003,
-		"In Progress",
-		HttpStatus.OK
-	),
-	
-	
-	INVALID_TOKEN
-	(
-			4000, 
-			"Invalid Token", 
-			HttpStatus.UNAUTHORIZED
-	),
-	
-	EXPIRED_TOKEN
-	(
-			4002, 
-			"Expired Token", 
-			HttpStatus.NOT_ACCEPTABLE
-	),
+	/*
+	 * Non severe Information/Error Responses 
+	 */
 	
 	NO_SUCH_EMAIL
 	(
-			4005, 
+			3010, 
 			"No Such Email", 
 			HttpStatus.BAD_REQUEST
 	),
 	
-	EMAIL_IN_USE
+	NO_SUCH_PHONE
 	(
-			4006, 
-			"Email In Use", 
-			HttpStatus.NOT_ACCEPTABLE
-	),
-	
-	NO_ROLE_DEFINED
-	(
-			4007, 
-			"No Role Defined", 
-			HttpStatus.NOT_ACCEPTABLE
-	),
-	
-	INVALID_PASSWORD
-	(
-			4008, 
-			"Invalid Password", 
-			HttpStatus.NOT_ACCEPTABLE
-	),
-	
-	FILE_SIZE_EXCEEDED
-	(
-			4001, 
-			"File Size Exceeded", 
+			3030, 
+			"No Such Phone", 
 			HttpStatus.BAD_REQUEST
 	),
 	
 	NO_SUCH_USER
 	(
-			4003, 
+			3050, 
 			"No Such User", 
-			HttpStatus.NO_CONTENT
+			HttpStatus.BAD_REQUEST
+	),
+	
+	NO_SUCH_USERNAME
+	(
+			3070, 
+			"No Such Username", 
+			HttpStatus.BAD_REQUEST
 	),
 	
 	NO_SUCH_USER_GROUP
 	(
-			4004, 
+			3090, 
 			"No Such User Group", 
-			HttpStatus.NO_CONTENT
+			HttpStatus.BAD_REQUEST
 	),
+	
+	EMAIL_IN_USE
+	(
+			3110, 
+			"Email In Use", 
+			HttpStatus.NOT_ACCEPTABLE
+	),
+	
+	PHONE_IN_USE
+	(
+			3130, 
+			"Phone In Use", 
+			HttpStatus.NOT_ACCEPTABLE
+	),
+	
+	USERNAME_IN_USE
+	(
+			3150, 
+			"Username In Use", 
+			HttpStatus.NOT_ACCEPTABLE
+	),
+	
+	NO_ROLE_DEFINED
+	(
+			3170, 
+			"No Role Defined", 
+			HttpStatus.NOT_ACCEPTABLE
+	),
+	
+	NO_PERMISSION_DEFINED
+	(
+			3190, 
+			"No Permission Defined", 
+			HttpStatus.NOT_ACCEPTABLE
+	),
+	
+	NO_EMAIL_DEFINED
+	(
+			3210, 
+			"No Email Defined", 
+			HttpStatus.NOT_ACCEPTABLE
+	),
+	
+	NO_PHONE_DEFINED
+	(
+			3230, 
+			"No Phone Defined", 
+			HttpStatus.NOT_ACCEPTABLE
+	),
+	
+	NO_USERNAME_DEFINED
+	(
+			3250, 
+			"No Username Defined", 
+			HttpStatus.NOT_ACCEPTABLE
+	),
+	
+	NO_AUTHENTICATION_DEFINED
+	(
+			3270, 
+			"No Authentication Defined", 
+			HttpStatus.NOT_ACCEPTABLE
+	),
+	
+	FILE_SIZE_EXCEEDED
+	(
+			3290, 
+			"File Size Exceeded", 
+			HttpStatus.BAD_REQUEST
+	),
+	
+	NUMBER_OF_FILES_EXCEEDED
+	(
+			3310, 
+			"Number Of Files Exceeded", 
+			HttpStatus.BAD_REQUEST
+	),
+	
 	
 	EMAIL_NOT_VERIFIED
 	(
-			4009, 
+			3330, 
 			"Email Not Verified", 
 			HttpStatus.BAD_REQUEST
 	),
 	
+	PHONE_NOT_VERIFIED
+	(
+			3350, 
+			"Phone Not Verified", 
+			HttpStatus.BAD_REQUEST
+	),
+	
+	USER_NOT_VERIFIED
+	(
+			3370, 
+			"User Not Verified", 
+			HttpStatus.BAD_REQUEST
+	),
+	
+	ACCOUNT_NOT_VERIFIED
+	(
+			3390, 
+			"Account Not Verified", 
+			HttpStatus.BAD_REQUEST
+	),
+	
+	NOT_FOUND
+	(
+			3410, 
+			"Not Found", 
+			HttpStatus.NOT_FOUND
+	),
+	
 	ENTITY_NOT_FOUND
 	(
-			4014, 
+			3430, 
 			"Entity Not Found", 
+			HttpStatus.NOT_FOUND
+	),
+	
+	OBJECT_NOT_FOUND
+	(
+			3450, 
+			"Object Not Found", 
+			HttpStatus.NOT_FOUND
+	),
+	
+	RESULT_NOT_FOUND
+	(
+			3470, 
+			"Result Not Found", 
+			HttpStatus.NOT_FOUND
+	),
+	
+	REESULT_NOT_FOUND_FOR_QUERY
+	(
+			3490, 
+			"Result Not Found For Query", 
 			HttpStatus.NOT_FOUND
 	),
 	
 	VALIDATION_EXCEPTION
 	(
-			4015, 
+			3510, 
 			"Validation Exception", 
 			HttpStatus.BAD_REQUEST
 	),
 	
 	ALREADY_EXISTS
 	(
-			4016, 
+			3530, 
 			"Already Exists", 
-			HttpStatus.CONFLICT
+			HttpStatus.BAD_REQUEST
 	),
 	
-	CONTACT_NUMBER_NOT_VERIFIED
+	EXPIRED_EMAIL_OTP
 	(
-			4017, 
-			"Contact Number Not Verified", 
+			3550, 
+			"Expired Email OTP", 
+			HttpStatus.BAD_REQUEST
+	),
+	
+	EXPIRED_PHONE_OTP
+	(
+			3570, 
+			"Expired Phone OTP", 
 			HttpStatus.BAD_REQUEST
 	),
 	
 	EXPIRED_OTP
 	(
-			4018, 
+			3590, 
 			"Expired OTP", 
-			HttpStatus.REQUEST_TIMEOUT
+			HttpStatus.BAD_REQUEST
+	),
+	
+	INVALID_EMAIL_OTP
+	(
+			3610, 
+			"Invalid Email OTP", 
+			HttpStatus.NOT_ACCEPTABLE
+	),
+	
+	INVALID_PHONE_OTP
+	(
+			3630, 
+			"Invalid Phone OTP", 
+			HttpStatus.NOT_ACCEPTABLE
 	),
 	
 	INVALID_OTP
 	(
-			4019, 
+			3650, 
 			"Invalid OTP", 
 			HttpStatus.NOT_ACCEPTABLE
 	),
 	
-	EMAIL_AND_CONTACT_NUMBER_NOT_VERIFIED
+	EMAIL_AND_PHONE_NOT_VERIFIED
 	(
-			4021, 
-			"Email And Contact Number Not Verified", 
+			3670, 
+			"Email And Phone Not Verified", 
 			HttpStatus.BAD_REQUEST
 	),
 	
-	CONTACT_NUMBER_IN_USE
+	EMAIL_AND_PHONE_IN_USE
 	(
-			4022, 
-			"Contact Number In Use", 
-			HttpStatus.NOT_ACCEPTABLE
-	),
-	
-	EMAIL_AND_CONTACT_NUMBER_IN_USE
-	(
-			4023, 
-			"Email And Contact Number In Use", 
-			HttpStatus.NOT_ACCEPTABLE
-	),
-	
-	OBJECT_NOT_FOUND
-	(
-			4024, 
-			"Object Not Found", 
-			HttpStatus.NOT_FOUND
-	),
-	
-	ORGANIZATION_NOT_FOUND
-	(
-			4025, 
-			"Organization Not Found", 
-			HttpStatus.NOT_FOUND
+			3690, 
+			"Email And Phone In Use", 
+			HttpStatus.BAD_REQUEST
 	),
 	
 	MALFORMED_JSON_PAYLOAD
 	(
-			4026,
+			3710,
 			"Malformed JSON Payload",
+			HttpStatus.BAD_REQUEST
+	),
+	
+	MALFORMED_REQUEST
+	(
+			3730,
+			"Malformed Request",
+			HttpStatus.BAD_REQUEST
+	),
+	
+	MALFORMED_HEADER
+	(
+			3750,
+			"Malformed Header",
+			HttpStatus.BAD_REQUEST
+	),
+	
+	MALFORMED_AUTHORIZATION
+	(
+			3770,
+			"Malformed Authorization",
 			HttpStatus.BAD_REQUEST
 	),
 	
 	REQUIRED_REQUEST_URI_PARAMETER_MISSING
 	(
-			4027,
+			3790,
 			"Required Request URI Parameter Missing",
 			HttpStatus.BAD_REQUEST
 	),
@@ -304,14 +580,14 @@ public enum ServiceResponse {
 	
 	NUMBER_FORMAT_EXCEPTION
 	(
-			4028,
+			3810,
 			"Number Format Exception",
 			HttpStatus.BAD_REQUEST
 	),
 	
 	NAME_UNAVAILABLE
 	(
-			4029,
+			3830,
 			"Name Unavailable",
 			HttpStatus.BAD_REQUEST
 	),
@@ -319,114 +595,234 @@ public enum ServiceResponse {
 	
 	SIGNED_STATE
 	(
-			4030,
+			3850,
 			"Signed State",
 			HttpStatus.BAD_REQUEST
 	),
 	
 	
-	INVALID_LOGIN_REQUEST
-	(
-			4031,
-			"Invalid Login Request",
-			HttpStatus.BAD_REQUEST
-	),
-	
 	ALREADY_APPROVED
 	(
-			4032, 
+			3870, 
 			"Already Approved", 
 			HttpStatus.OK
 	),
 	
 	ALREADY_REJECTED
 	(
-			4033, 
+			3890, 
 			"Already Rejected", 
 			HttpStatus.OK
 	),
 	
 	ALREADY_INVITED
 	(
-			4034, 
+			3910, 
 			"Already Invited", 
 			HttpStatus.OK
 	),
 	
 	ALREADY_INITIATED
 	(
-			4035, 
+			3930, 
 			"Already Initiated", 
 			HttpStatus.OK
 	),
 
 	INSUFFICIENT_CREDIT
 	(
-			4036,
+			3950,
 			"Insufficient Credit",
 			HttpStatus.OK
 	),
+	
+	/*
+	 * Authentication Errors
+	 */
+	
+	INVALID_JWT_TOKEN
+	(
+			4010, 
+			"Invalid JWT Token", 
+			HttpStatus.UNAUTHORIZED
+	),
+	
+	INVALID_TOKEN
+	(
+			4030, 
+			"Invalid Token", 
+			HttpStatus.UNAUTHORIZED
+	),
+	
+	TAMPERED_JWT_TOKEN
+	(
+			4050, 
+			"Tampered JWT Token", 
+			HttpStatus.UNAUTHORIZED
+	),
+	
+	TAMPERED_TOKEN
+	(
+			4070, 
+			"Tampered Token", 
+			HttpStatus.UNAUTHORIZED
+	),
+	
+	INVALID_KEY
+	(
+			4090, 
+			"Invalid Key", 
+			HttpStatus.UNAUTHORIZED
+	),
+	
+	TAMPERED_KEY
+	(
+			4110, 
+			"Tampered Key", 
+			HttpStatus.UNAUTHORIZED
+	),
+	
+	INVALID_PASSWORD
+	(
+			4130, 
+			"Invalid Password", 
+			HttpStatus.UNAUTHORIZED
+	),
+	
+	INVALID_AUTHENTICATION
+	(
+			4150, 
+			"Invalid Authentication", 
+			HttpStatus.UNAUTHORIZED
+	),
+	
+	INVALID_FINGERPRINT
+	(
+			4170, 
+			"Invalid Fingerprint", 
+			HttpStatus.UNAUTHORIZED
+	),
+	
+	INVALID_FACE_RECOGNITION
+	(
+			4190, 
+			"Invalid Face Recognition", 
+			HttpStatus.UNAUTHORIZED
+	),
+	
+	EXPIRED_JWT_TOKEN
+	(
+			4210, 
+			"Expired JWT Token", 
+			HttpStatus.NOT_ACCEPTABLE
+	),
+	
+	EXPIRED_TOKEN
+	(
+			4230, 
+			"Invalid Token", 
+			HttpStatus.NOT_ACCEPTABLE
+	),
+	
+	EXPIRED_KEY
+	(
+			4250, 
+			"Expired Key", 
+			HttpStatus.NOT_ACCEPTABLE
+	),
+	
+	LOGIN_ATTEMPT_EXCEEDED
+	(
+			4270, 
+			"Login Attempt Exceeded", 
+			HttpStatus.NOT_ACCEPTABLE
+	),
+	
+	LOGIN_DENIED
+	(
+			4290, 
+			"Login Denied", 
+			HttpStatus.NOT_ACCEPTABLE
+	),
+	
+	AUTHORIZATION_SUSPENDED
+	(
+			4310, 
+			"Authorization Suspended", 
+			HttpStatus.NOT_ACCEPTABLE
+	),
 
 	
-	INTERNAL_CONNECTION_DISPUTE
+	/*
+	 * Server Error 
+	 */
+	
+	INTERNAL_DISPUTE
 	(
-			5005, 
-			"Internal Connection Dispute", 
+			5010, 
+			"Internal Dispute", 
 			HttpStatus.INTERNAL_SERVER_ERROR
 	),
 	
-	CLOUD_CONNECTION_ERROR
+	CONNECTION_ERROR
 	(
-			5006, 
-			"Cloud Connection error", 
+			5030, 
+			"Connection error", 
 			HttpStatus.INTERNAL_SERVER_ERROR
 	),
 	
 	CONFLICT
 	(
-			5007, 
+			5050, 
 			"Conflict", 
 			HttpStatus.CONFLICT
 	),
 	
-	NO_VALID_AUTHORIZATION
+	MAIL_SENT_ERROR
 	(
-			5008, 
-			"No Valid Authorization", 
-			HttpStatus.UNAUTHORIZED
-	),
-	
-	MAIL_SEND_ERROR
-	(
-			5009, 
+			5070, 
 			"Mail Sent Error", 
 			HttpStatus.SERVICE_UNAVAILABLE
 	),
 	
 	NO_UNIQUE_RESULT
 	(
-			5010, 
+			5090, 
 			"No Unique Result", 
 			HttpStatus.CONFLICT
 	),
 	
-	OTP_SMS_SEND_ERROR
+	OTP_EMAIL_SENT_ERROR
 	(
-			5011, 
-			"OTP SMS Send Error", 
+			5110, 
+			"OTP Email Sent Error", 
+			HttpStatus.SERVICE_UNAVAILABLE
+	),
+	
+	OTP_PHONE_SENT_ERROR
+	(
+			5130, 
+			"OTP Phone Sent Error", 
+			HttpStatus.SERVICE_UNAVAILABLE
+	),
+	
+	OTP_SENT_ERROR
+	(
+			5150, 
+			"OTP Sent Error", 
 			HttpStatus.SERVICE_UNAVAILABLE
 	),
 	
 	UPLOAD_FAILED
 	(
-			5012, 
+			5170, 
 			"Upload Failed", 
-			HttpStatus.BAD_GATEWAY
+			HttpStatus.INTERNAL_SERVER_ERROR
 	),
 	
 	SERVER_ERROR
 	(
-			5013, 
+			5190, 
 			"Server Error", 
 			HttpStatus.INTERNAL_SERVER_ERROR
 	),
@@ -434,10 +830,11 @@ public enum ServiceResponse {
 	
 	TOKEN_GENERATE_ERROR
 	(
-			5014,
+			5210,
 			"Token Generate Error",
 			HttpStatus.INTERNAL_SERVER_ERROR
 	)
+	
 	;
 	
 	
@@ -538,6 +935,29 @@ public enum ServiceResponse {
 				this.getHttpStatus(), 
 				ServiceResponse.valueOf(this.name()),
 				message);
+	}
+	
+	/**
+	 * Call the @see StateServiceBuilder 
+	 * buildResponse() method
+	 * and returns 
+	 * @see ResponseEntity 
+	 * object.
+	 * 
+	 * @param objectAsResponse the object for response building
+	 * 
+	 * @return status @see HttpStatus
+	 * @see ServiceResponse
+	 * @see Object objectAsResponse 
+	 * for 
+	 * @see ResponseEntity
+	 */
+	public ResponseEntity<?> buildResponse(Object objectAsResponse) {
+		return new StateServiceResponseBuilder().buildResponse(
+				this.getHttpStatus(), 
+				ServiceResponse.valueOf(this.name()),
+				objectAsResponse
+				);
 	}
 	
 	/**

@@ -171,7 +171,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     public ResponseEntity<?> handleAccessDeniedException(HttpServletRequest request, HttpServletResponse response,
             AccessDeniedException ex) throws IOException, ServletException {
     	StateServiceResponse stateServiceResponse = new StateServiceResponse(
-    			new ApiServiceResponse(ServiceResponse.NO_VALID_AUTHORIZATION.value(), ServiceResponse.NO_VALID_AUTHORIZATION), 
+    			new ApiServiceResponse(ServiceResponse.INVALID_AUTHENTICATION.value(), ServiceResponse.INVALID_AUTHENTICATION), 
 	    		"Not authorized to access this call");
     	return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(stateServiceResponse);
     	
