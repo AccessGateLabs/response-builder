@@ -465,7 +465,7 @@ public enum ServiceResponse {
 			HttpStatus.NOT_FOUND
 	),
 	
-	REESULT_NOT_FOUND_FOR_QUERY
+	RESULT_NOT_FOUND_FOR_QUERY
 	(
 			3490, 
 			"Result Not Found For Query", 
